@@ -15,18 +15,13 @@ const ToggleAside = () => {
     dispatch(setAsideOpen(!asideOpen));
   };
   return (
-    <Button
-      isIconOnly
-      onPress={handelAsideOpen}
-      variant="light"
-      radius="lg"
-    >
+    <button className="cursor-pointer rounded-2xl active:bg-gray-200 hover:bg-gray-100 p-2">
       {asideOpen ? (
-        <IconComponent  Icon={VscClose}  className="text-2xl"  />
+        <IconComponent Icon={VscClose} className="text-2xl" />
       ) : (
         <IconComponent Icon={BsList} className="text-2xl" />
       )}
-    </Button>
+    </button>
   );
 };
 

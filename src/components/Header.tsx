@@ -1,4 +1,3 @@
-import { Avatar } from "@heroui/react";
 import ToggleAside from "./ToggleAside";
 import ToggleDark from "./ToggleDark";
 import AvatarDropDown from "./AvatarDropDown";

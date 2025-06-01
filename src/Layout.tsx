@@ -8,7 +8,7 @@ const Layout = () => {
       <Aside />
       <section className="flex-grow flex flex-col">
         <Header />
-        <main className="bg-gradient-to-br from-primary-50/20 via-primary-50/50 to-primary-50/70 flex-1 transition-all z-[9997]">
+        <main className="bg-gray-100 flex-1 transition-all z-[9997]">
           <Outlet />
           <div>djdnj </div>
           <div>djdnj </div>

@@ -19,7 +19,6 @@ const ToggleAside = () => {
       isIconOnly
       onPress={handelAsideOpen}
       variant="light"
-      className="text-lg"
       radius="lg"
     >
       {asideOpen ? (

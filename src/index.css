@@ -5,3 +5,7 @@ div#root{
     width: 100%;
     
 }
+a.active{
+    @apply  bg-gray-200  dark:bg-slate-950 rounded-3xl  ;
+  
+}

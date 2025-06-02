@@ -9,12 +9,14 @@ const AvatarDropDown = () => {
   const [avatarDropDownOpen, setAvatarDropDownOpen] = useState(false);
   const dropDownRef = useRef<HTMLDivElement>(null);
   const avatarButtonRef = useRef<HTMLButtonElement>(null);
-  const handelToggleAvatarDropDown =useCallback((value?: boolean) => {
-    setAvatarDropDownOpen(
-      typeof value === "boolean" ? value : !avatarDropDownOpen
-    );
-  }
-,[avatarDropDownOpen]) 
+  const handelToggleAvatarDropDown = useCallback(
+    (value?: boolean) => {
+      setAvatarDropDownOpen(
+        typeof value === "boolean" ? value : !avatarDropDownOpen
+      );
+    },
+    [avatarDropDownOpen]
+  );
   useEffect(() => {
     const handelCLickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
@@ -45,8 +47,8 @@ const AvatarDropDown = () => {
       </button>
       <motion.div
         initial={{
-          scale:0,
-          opacity:0,
+          scale: 0,
+          opacity: 0,
         }}
         animate={{
           scale: avatarDropDownOpen ? 1 : 0,
@@ -70,7 +72,7 @@ const AvatarDropDown = () => {
             </Link>
           ) : (
             <button
-             key={"avatar element " + item.id}
+              key={"avatar element " + item.id}
               className="flex items-center gap-2 rounded-md p-2 active:bg-danger-50 hover:bg-danger-50 cursor-pointer"
               onClick={() => handelToggleAvatarDropDown(false)}
             >

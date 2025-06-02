@@ -13,6 +13,14 @@ const ToggleDark = () => {
   const handelToggleThem = () => {
     dipatch(setTheme(theme === "dark" ? "light" : "dark"));
   };
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  });
+
   return (
     <button
       onClick={handelToggleThem}
